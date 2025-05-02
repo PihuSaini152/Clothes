@@ -1,0 +1,233 @@
+ .casual {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  justify-content: center;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.left-sidebar {
+  width: 200px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  min-height: 400px;
+  transition: 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.left-sidebar .sidebar-close-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.breadcrumb .current {
+  font-weight: bold;
+  color: #000;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-icon {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 8px;
+  color: #333;
+}
+
+.category-section {
+  margin-bottom: 25px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.arrow {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.filter-section {
+  margin-bottom: 25px;
+}
+
+.filter-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.price-slider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.price-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-circle.red { background: red; }
+.color-circle.blue { background: blue; }
+.color-circle.green { background: green; }
+.color-circle.yellow { background: yellow; }
+.color-circle.black { background: black; }
+
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.size-options button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.size-options button:hover {
+  background-color: #ddd;
+}
+
+.apply-filter-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.apply-filter-btn:hover {
+  background-color: #333;
+}
+
+.rightside {
+  flex: 1;
+}
+
+.heading-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+
+@media (max-width: 1024px) {
+  .casual {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .left-sidebar {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .rightside {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    overflow-y: auto;  
+    border-radius: 0;
+  }
+
+  .left-sidebar.show {
+    left: 0;
+  }
+
+  .left-sidebar .sidebar-close-icon {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .toggle-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .left-sidebar {
+    padding: 15px;
+  }
+
+  .filter-title {
+    font-size: 16px;
+  }
+
+  .size-options button {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .apply-filter-btn {
+    font-size: 14px;
+  }
+}
+

@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .top-banner {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+  .top-banner a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid grey;
+    background-color: #fff;
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .nav-icons {
+    display: flex;
+    gap: 16px;
+    font-size: 25px;
+  }
+  
+  .menu-icon {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 100%;
+    padding: 15px 20px;
+    gap: 14px;
+    padding-left: 100px;
+    z-index: 10;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #111;
+  }
+  
+  .desktop-extra {
+    display: none;
+    align-items: center;
+    gap: 18px;
+    margin-left: auto;
+  }
+  .desktop-extra input {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 260px;
+    font-size: 14px;
+  }
+  
+  .mobile-only {
+    display: flex;
+  }
+  .desktop-only {
+    display: none;
+  }
+  
+  @media (min-width: 920px) {
+    .logo {
+      position: static;
+      transform: none;
+    }
+  
+    .menu-icon,
+    .nav-icons {
+      display: none;
+     
+    }
+  
+    .nav-links {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      gap: 30px;
+    }
+  
+    .desktop-extra {
+      display: flex;
+    }
+  
+    .mobile-only {
+      display: none !important;
+    }
+  
+    .desktop-only {
+      display: flex !important;
+    }
+  }
+  
+  .icon {
+    cursor: pointer;
+    font-size: 25px;
+  }
+  

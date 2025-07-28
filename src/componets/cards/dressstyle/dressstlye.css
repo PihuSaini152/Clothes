@@ -1,0 +1,60 @@
+ .dress-style-section {
+  max-width: 100%;
+ margin-top: 80px;
+ 
+}
+
+.style-section2{
+  width: 65%;
+  margin: auto;
+  background-color: rgb(240, 235, 235);
+  text-align: center;
+  border-radius: 20px;
+  padding: 50px 0px;
+
+
+}
+.m-block{
+  width: 100%;
+ display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.m-card{
+  width: 250px;
+  height: 250px;
+ border-radius: 20px;
+}
+.m-carda{
+  width: 400px;
+  height: 250px;
+   border-radius: 20px;
+}
+.m-cardimg{
+  width: 250px;
+  height: 245px;
+
+}
+.m-cardaimg{
+  width: 400px;
+  height: 243px;
+  
+}
+@media( max-width:630px){
+
+  .m-cardaimg{
+  width: 250px;
+ 
+}
+.m-carda{
+  width: 250px;
+ 
+}
+}
+@media( max-width:430px){
+  .style-section2{
+   width: 270px;
+  }
+}
